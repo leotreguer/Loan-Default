@@ -8,6 +8,27 @@
   },
   "projectType": "REGULAR",
   "projectAppType": "REGULAR",
+  "bundleExporterSettings": {
+    "exportOptions": {
+      "exportUploads": false,
+      "exportManagedFS": false,
+      "exportAnalysisModels": false,
+      "exportSavedModels": false,
+      "exportManagedFolders": false,
+      "exportModelEvaluationStores": false,
+      "exportAllInputDatasets": false,
+      "exportAllDatasets": false,
+      "exportAllInputManagedFolders": false,
+      "exportGitRepository": false,
+      "exportInsightsData": false,
+      "useManualPluginsInfo": false,
+      "includedDatasetsData": [],
+      "includedSavedModels": [],
+      "includedModelEvaluationStores": [],
+      "includedManagedFolders": [],
+      "shareAllInputDatasets": false
+    }
+  },
   "owner": "leo.treguer",
   "permissions": [],
   "additionalDashboardUsers": {
@@ -177,11 +198,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "leo.treguer"
     },
-    "lastModifiedOn": 1619593951539
+    "lastModifiedOn": 1619594227335
   },
   "creationTag": {
     "versionNumber": 0,
