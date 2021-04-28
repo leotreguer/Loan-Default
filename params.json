@@ -22,7 +22,16 @@
       "exportGitRepository": false,
       "exportInsightsData": false,
       "useManualPluginsInfo": false,
-      "includedDatasetsData": [],
+      "includedDatasetsData": [
+        {
+          "name": "customer_information",
+          "type": "UploadedFiles"
+        },
+        {
+          "name": "all_loan_requests",
+          "type": "UploadedFiles"
+        }
+      ],
       "includedSavedModels": [],
       "includedModelEvaluationStores": [],
       "includedManagedFolders": [],
@@ -198,11 +207,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "leo.treguer"
     },
-    "lastModifiedOn": 1619594227335
+    "lastModifiedOn": 1619594501860
   },
   "creationTag": {
     "versionNumber": 0,
