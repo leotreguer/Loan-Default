@@ -34,8 +34,8 @@
       ],
       "includedSavedModels": [
         {
-          "id": "wnDatAuP",
-          "name": "Prediction (RANDOM_FOREST_CLASSIFICATION) on train"
+          "id": "JjkP4kZi",
+          "name": "Prediction (LOGISTIC_REGRESSION) on train"
         }
       ],
       "includedModelEvaluationStores": [],
@@ -212,11 +212,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "leo.treguer"
     },
-    "lastModifiedOn": 1619594572038
+    "lastModifiedOn": 1619599891936
   },
   "creationTag": {
     "versionNumber": 0,
