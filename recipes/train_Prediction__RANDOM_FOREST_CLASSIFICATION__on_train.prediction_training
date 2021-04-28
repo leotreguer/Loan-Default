@@ -1,0 +1,706 @@
+{
+    "core": {
+        "prediction_type": "BINARY_CLASSIFICATION",
+        "weight": {
+            "weightMethod": "CLASS_WEIGHT"
+        },
+        "calibration": {
+            "calibrationMethod": "NO_CALIBRATION"
+        },
+        "partitionedModel": {
+            "enabled": false,
+            "ssdSelection": {
+                "targetRatio": 0.02,
+                "maxReadUncompressedBytes": -1,
+                "ordering": {
+                    "rules": [],
+                    "enabled": false
+                },
+                "latestPartitionsN": 1,
+                "filter": {
+                    "distinct": false,
+                    "enabled": false
+                },
+                "withinFirstN": -1,
+                "maxRecords": -1,
+                "partitionSelectionMethod": "ALL",
+                "useMemTable": false,
+                "samplingMethod": "FULL"
+            }
+        },
+        "backendType": "PY_MEMORY",
+        "time": {
+            "enabled": false,
+            "ascending": true
+        },
+        "executionParams": {
+            "sparkCheckpoint": "NONE",
+            "sparkParams": {
+                "sparkUseGlobalMetastore": false,
+                "sparkExecutionEngine": "SPARK_SUBMIT",
+                "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK",
+                "pipelineAllowStart": true,
+                "pipelineAllowMerge": true,
+                "sparkConf": {
+                    "inheritConf": "default",
+                    "conf": []
+                },
+                "sparkRepartitionNonHDFS": 1
+            },
+            "containerSelection": {
+                "containerMode": "INHERIT"
+            },
+            "envSelection": {
+                "envMode": "USE_BUILTIN_MODE"
+            }
+        },
+        "taskType": "PREDICTION",
+        "target_variable": "Default"
+    },
+    "partSource": "ACTIVE_VERSION",
+    "generatingModelId": "A-FIFTHTHIRD_LOANDEFAULT-SGGN9BWl-XXMCPcDZ-s1-pp1-m1",
+    "splitParams": {
+        "kfold": false,
+        "splitBeforePrepare": true,
+        "instanceIdRefresher": 0,
+        "ttPolicy": "SPLIT_SINGLE_DATASET",
+        "testOnLargerValues": true,
+        "ssdSplitMode": "RANDOM",
+        "ssdSelection": {
+            "targetRatio": 0.02,
+            "maxReadUncompressedBytes": -1,
+            "ordering": {
+                "rules": [],
+                "enabled": false
+            },
+            "latestPartitionsN": 1,
+            "filter": {
+                "distinct": false,
+                "enabled": false
+            },
+            "withinFirstN": -1,
+            "maxRecords": 100000,
+            "partitionSelectionMethod": "ALL",
+            "useMemTable": false,
+            "samplingMethod": "HEAD_SEQUENTIAL"
+        },
+        "subSamplingSeed": 1337,
+        "ssdSeed": 1337,
+        "nFolds": 5,
+        "ssdTrainingRatio": 0.8
+    },
+    "backendType": "PY_MEMORY",
+    "script": {
+        "maxProcessedMemTableBytes": -1,
+        "sorting": [],
+        "columnsSelection": {
+            "mode": "ALL"
+        },
+        "analysisColumnData": {},
+        "exploreUIParams": {},
+        "vizSampling": {
+            "autoRefreshSample": false,
+            "_refreshTrigger": 0
+        },
+        "coloring": {
+            "scheme": "MEANING_AND_STATUS",
+            "valueColoringMode": "HASH",
+            "individualColumns": []
+        },
+        "steps": [],
+        "globalSearchQuery": "",
+        "previewMode": "ALL_ROWS",
+        "explorationSampling": {
+            "autoRefreshSample": false,
+            "selection": {
+                "targetRatio": 0.02,
+                "maxReadUncompressedBytes": -1,
+                "ordering": {
+                    "rules": [],
+                    "enabled": false
+                },
+                "latestPartitionsN": 1,
+                "filter": {
+                    "distinct": false,
+                    "enabled": false
+                },
+                "withinFirstN": -1,
+                "maxRecords": 10000,
+                "partitionSelectionMethod": "ALL",
+                "maxStoredBytes": 104857600,
+                "samplingMethod": "HEAD_SEQUENTIAL"
+            },
+            "_refreshTrigger": 0
+        },
+        "explorationFilters": []
+    },
+    "sparkParams": {
+        "sparkUseGlobalMetastore": false,
+        "sparkExecutionEngine": "SPARK_SUBMIT",
+        "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK",
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true,
+        "sparkConf": {
+            "inheritConf": "default",
+            "conf": []
+        },
+        "sparkRepartitionNonHDFS": 1
+    },
+    "preprocessing": {
+        "preprocessingFitSampleSeed": 1337,
+        "feature_selection_params": {
+            "custom_params": {
+                "code": "# type your code here"
+            },
+            "pca_params": {
+                "variance_proportion": 0.9,
+                "n_features": 25
+            },
+            "random_forest_params": {
+                "depth": 10,
+                "n_features": 25,
+                "n_trees": 30
+            },
+            "lasso_params": {
+                "alpha": [
+                    0.01,
+                    0.1,
+                    1.0,
+                    10.0,
+                    100.0
+                ],
+                "cross_validate": true
+            },
+            "method": "NONE",
+            "correlation_params": {
+                "n_features": 25,
+                "min_abs_correlation": 0.0
+            }
+        },
+        "preprocessingFitSampleRatio": 1.0,
+        "reduce": {
+            "enabled": false,
+            "kept_variance": 0.0
+        },
+        "skipPreprocessing": false,
+        "target_remapping": [
+            {
+                "mappedValue": 0,
+                "sourceValue": "0.0",
+                "sampleFreq": 1887
+            },
+            {
+                "mappedValue": 1,
+                "sourceValue": "1.0",
+                "sampleFreq": 353
+            }
+        ],
+        "per_feature": {
+            "Status": {
+                "missing_impute_with": "MODE",
+                "autoReason": "REJECT_ZERO_VARIANCE",
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "cumulative_proportion": 0.95,
+                "sendToInput": "main",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "Text",
+                    "autoModifiedByDSS": false
+                },
+                "role": "REJECT",
+                "max_nb_categories": 100,
+                "dummy_clip": "MAX_NB_CATEGORIES",
+                "missing_handling": "NONE",
+                "dummy_drop": "NONE",
+                "min_samples": 10,
+                "type": "CATEGORY",
+                "max_cat_safety": 200,
+                "category_handling": "DUMMIFY",
+                "hash_whole_categories": false
+            },
+            "Monthly_Income": {
+                "generate_derivative": false,
+                "numerical_handling": "REGULAR",
+                "missing_impute_with": "MEAN",
+                "missing_handling": "IMPUTE",
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "sendToInput": "main",
+                "binarize_threshold_mode": "MEDIAN",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "DoubleMeaning",
+                    "autoModifiedByDSS": false
+                },
+                "role": "INPUT",
+                "binarize_constant_threshold": 0.0,
+                "quantile_bin_nb_bins": 4,
+                "rescaling": "AVGSTD",
+                "type": "NUMERIC",
+                "impute_constant_value": 0.0
+            },
+            "Date_Of_Birth_parsed": {
+                "generate_derivative": false,
+                "numerical_handling": "REGULAR",
+                "missing_impute_with": "MEAN",
+                "missing_handling": "IMPUTE",
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "sendToInput": "main",
+                "binarize_threshold_mode": "MEDIAN",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "Date",
+                    "autoModifiedByDSS": false
+                },
+                "role": "REJECT",
+                "binarize_constant_threshold": 0.0,
+                "quantile_bin_nb_bins": 4,
+                "rescaling": "AVGSTD",
+                "type": "NUMERIC",
+                "impute_constant_value": 0.0
+            },
+            "Age": {
+                "generate_derivative": false,
+                "numerical_handling": "REGULAR",
+                "missing_impute_with": "MEAN",
+                "missing_handling": "IMPUTE",
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "sendToInput": "main",
+                "binarize_threshold_mode": "MEDIAN",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "LongMeaning",
+                    "autoModifiedByDSS": false
+                },
+                "role": "INPUT",
+                "binarize_constant_threshold": 0.0,
+                "quantile_bin_nb_bins": 4,
+                "rescaling": "AVGSTD",
+                "type": "NUMERIC",
+                "impute_constant_value": 0.0
+            },
+            "Amount_Requested": {
+                "generate_derivative": false,
+                "numerical_handling": "REGULAR",
+                "missing_impute_with": "MEAN",
+                "missing_handling": "IMPUTE",
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "sendToInput": "main",
+                "binarize_threshold_mode": "MEDIAN",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "LongMeaning",
+                    "autoModifiedByDSS": false
+                },
+                "role": "INPUT",
+                "binarize_constant_threshold": 0.0,
+                "quantile_bin_nb_bins": 4,
+                "rescaling": "AVGSTD",
+                "type": "NUMERIC",
+                "impute_constant_value": 0.0
+            },
+            "Default": {
+                "generate_derivative": false,
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "sendToInput": "main",
+                "binarize_threshold_mode": "MEDIAN",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "DoubleMeaning",
+                    "autoModifiedByDSS": false
+                },
+                "role": "TARGET",
+                "binarize_constant_threshold": 0.0,
+                "quantile_bin_nb_bins": 4,
+                "type": "NUMERIC",
+                "impute_constant_value": 0.0
+            },
+            "Interest_Rate": {
+                "generate_derivative": false,
+                "numerical_handling": "REGULAR",
+                "missing_impute_with": "MEAN",
+                "missing_handling": "IMPUTE",
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "sendToInput": "main",
+                "binarize_threshold_mode": "MEDIAN",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "DoubleMeaning",
+                    "autoModifiedByDSS": false
+                },
+                "role": "INPUT",
+                "binarize_constant_threshold": 0.0,
+                "quantile_bin_nb_bins": 4,
+                "rescaling": "AVGSTD",
+                "type": "NUMERIC",
+                "impute_constant_value": 0.0
+            },
+            "Loan_Purpose": {
+                "missing_impute_with": "MODE",
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "cumulative_proportion": 0.95,
+                "sendToInput": "main",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "Text",
+                    "autoModifiedByDSS": false
+                },
+                "role": "INPUT",
+                "max_nb_categories": 100,
+                "dummy_clip": "MAX_NB_CATEGORIES",
+                "missing_handling": "NONE",
+                "dummy_drop": "NONE",
+                "min_samples": 10,
+                "type": "CATEGORY",
+                "max_cat_safety": 200,
+                "category_handling": "DUMMIFY",
+                "hash_whole_categories": false
+            },
+            "Loan_Length": {
+                "generate_derivative": false,
+                "numerical_handling": "REGULAR",
+                "missing_impute_with": "MEAN",
+                "missing_handling": "IMPUTE",
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "sendToInput": "main",
+                "binarize_threshold_mode": "MEDIAN",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "LongMeaning",
+                    "autoModifiedByDSS": false
+                },
+                "role": "INPUT",
+                "binarize_constant_threshold": 0.0,
+                "quantile_bin_nb_bins": 4,
+                "rescaling": "AVGSTD",
+                "type": "NUMERIC",
+                "impute_constant_value": 0.0
+            },
+            "State": {
+                "missing_impute_with": "MODE",
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "cumulative_proportion": 0.95,
+                "sendToInput": "main",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "USStateMeaning",
+                    "autoModifiedByDSS": false
+                },
+                "role": "INPUT",
+                "max_nb_categories": 100,
+                "dummy_clip": "MAX_NB_CATEGORIES",
+                "missing_handling": "NONE",
+                "dummy_drop": "NONE",
+                "min_samples": 10,
+                "type": "CATEGORY",
+                "max_cat_safety": 200,
+                "category_handling": "DUMMIFY",
+                "hash_whole_categories": false
+            },
+            "Date_Of_Birth": {
+                "missing_impute_with": "MODE",
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "cumulative_proportion": 0.95,
+                "sendToInput": "main",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "DateSource",
+                    "autoModifiedByDSS": false
+                },
+                "role": "REJECT",
+                "max_nb_categories": 100,
+                "dummy_clip": "MAX_NB_CATEGORIES",
+                "missing_handling": "NONE",
+                "dummy_drop": "NONE",
+                "min_samples": 10,
+                "type": "CATEGORY",
+                "max_cat_safety": 200,
+                "category_handling": "DUMMIFY",
+                "hash_whole_categories": false
+            },
+            "FicoAvg": {
+                "generate_derivative": false,
+                "numerical_handling": "REGULAR",
+                "missing_impute_with": "MEAN",
+                "missing_handling": "IMPUTE",
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "sendToInput": "main",
+                "binarize_threshold_mode": "MEDIAN",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "DoubleMeaning",
+                    "autoModifiedByDSS": false
+                },
+                "role": "INPUT",
+                "binarize_constant_threshold": 0.0,
+                "quantile_bin_nb_bins": 4,
+                "rescaling": "AVGSTD",
+                "type": "NUMERIC",
+                "impute_constant_value": 0.0
+            },
+            "Home_Ownership": {
+                "missing_impute_with": "MODE",
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "cumulative_proportion": 0.95,
+                "sendToInput": "main",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "Text",
+                    "autoModifiedByDSS": false
+                },
+                "role": "INPUT",
+                "max_nb_categories": 100,
+                "dummy_clip": "MAX_NB_CATEGORIES",
+                "missing_handling": "NONE",
+                "dummy_drop": "NONE",
+                "min_samples": 10,
+                "type": "CATEGORY",
+                "max_cat_safety": 200,
+                "category_handling": "DUMMIFY",
+                "hash_whole_categories": false
+            },
+            "id": {
+                "generate_derivative": false,
+                "customHandlingCode": "",
+                "customProcessorWantsMatrix": false,
+                "sendToInput": "main",
+                "binarize_threshold_mode": "MEDIAN",
+                "state": {
+                    "userModified": false,
+                    "recordedMeaning": "LongMeaning",
+                    "autoModifiedByDSS": false
+                },
+                "role": "REJECT",
+                "binarize_constant_threshold": 0.0,
+                "quantile_bin_nb_bins": 4,
+                "autoReason": "REJECT_IDENTIFIER",
+                "type": "NUMERIC",
+                "impute_constant_value": 0.0
+            }
+        },
+        "feature_generation": {
+            "manual_interactions": {
+                "interactions": []
+            },
+            "pairwise_linear": {
+                "behavior": "DISABLED"
+            },
+            "categoricals_count_transformer": {
+                "input_features": [],
+                "all_features": false,
+                "behavior": "DISABLED"
+            },
+            "polynomial_combinations": {
+                "behavior": "DISABLED"
+            },
+            "numericals_clustering": {
+                "k": 0,
+                "input_features": [],
+                "all_features": false,
+                "behavior": "DISABLED"
+            }
+        }
+    },
+    "envSelection": {
+        "envMode": "USE_BUILTIN_MODE"
+    },
+    "modeling": {
+        "metrics": {
+            "customEvaluationMetricGIB": true,
+            "customEvaluationMetricNeedsProba": false,
+            "thresholdOptimizationMetric": "F1",
+            "evaluationMetric": "ROC_AUC",
+            "costMatrixWeights": {
+                "fnGain": 0.0,
+                "tpGain": 1.0,
+                "fpGain": -0.3,
+                "tnGain": 0.0
+            },
+            "liftPoint": 0.4
+        },
+        "algorithm": "RANDOM_FOREST_CLASSIFICATION",
+        "grid_search_params": {
+            "nIter": 0,
+            "splitRatio": 0.8,
+            "randomized": true,
+            "shuffleIterations": 1,
+            "mode": "KFOLD",
+            "timeout": 0,
+            "nJobs": 4,
+            "nFolds": 3,
+            "stratified": true
+        },
+        "autoOptimizeThreshold": true,
+        "gridLength": 2,
+        "computeLearningCurves": false,
+        "forcedClassifierThreshold": 0.0,
+        "rf_classifier_grid": {
+            "max_feature_prop": {
+                "values": [
+                    0.3
+                ],
+                "gridMode": "EXPLICIT",
+                "randomMode": "RANGE",
+                "range": {
+                    "min": 0.1,
+                    "max": 0.7,
+                    "scaling": "LINEAR",
+                    "nbValues": 3
+                },
+                "limit": {
+                    "min": 1e-23,
+                    "max": 1
+                }
+            },
+            "max_tree_depth": {
+                "gridMode": "EXPLICIT",
+                "values": [
+                    6,
+                    13
+                ],
+                "randomMode": "RANGE",
+                "range": {
+                    "min": 5,
+                    "max": 10,
+                    "scaling": "LINEAR",
+                    "nbValues": 3
+                },
+                "limit": {
+                    "min": 1,
+                    "max": null
+                }
+            },
+            "selection_mode": "auto",
+            "enabled": true,
+            "min_samples_leaf": {
+                "gridMode": "EXPLICIT",
+                "values": [
+                    1
+                ],
+                "randomMode": "RANGE",
+                "range": {
+                    "min": 3,
+                    "max": 20,
+                    "scaling": "LINEAR",
+                    "nbValues": 3
+                },
+                "limit": {
+                    "min": 1,
+                    "max": null
+                }
+            },
+            "n_estimators": {
+                "gridMode": "EXPLICIT",
+                "values": [
+                    100
+                ],
+                "randomMode": "RANGE",
+                "range": {
+                    "min": 80,
+                    "max": 200,
+                    "scaling": "LINEAR",
+                    "nbValues": 3
+                },
+                "limit": {
+                    "min": 1,
+                    "max": null
+                }
+            },
+            "n_jobs": 4,
+            "max_features": {
+                "gridMode": "EXPLICIT",
+                "values": [
+                    0
+                ],
+                "randomMode": "RANGE",
+                "range": {
+                    "min": 1,
+                    "max": 20,
+                    "scaling": "LINEAR",
+                    "nbValues": 3
+                },
+                "limit": {
+                    "min": 1,
+                    "max": null
+                }
+            }
+        },
+        "max_ensemble_nodes_serialized": 6000,
+        "pluginAlgoCustomGridSearch": false,
+        "skipExpensiveReports": false
+    },
+    "expectedPreparationOutputSchema": {
+        "userModified": false,
+        "columns": [
+            {
+                "type": "bigint",
+                "name": "id"
+            },
+            {
+                "type": "string",
+                "name": "Status"
+            },
+            {
+                "type": "string",
+                "name": "Date_Of_Birth"
+            },
+            {
+                "type": "date",
+                "name": "Date_Of_Birth_parsed"
+            },
+            {
+                "type": "bigint",
+                "name": "Age"
+            },
+            {
+                "type": "double",
+                "name": "Monthly_Income"
+            },
+            {
+                "type": "string",
+                "name": "State"
+            },
+            {
+                "type": "double",
+                "name": "Interest_Rate"
+            },
+            {
+                "type": "double",
+                "name": "FicoAvg"
+            },
+            {
+                "type": "double",
+                "name": "Default"
+            },
+            {
+                "type": "bigint",
+                "name": "Amount_Requested"
+            },
+            {
+                "type": "string",
+                "name": "Loan_Purpose"
+            },
+            {
+                "type": "bigint",
+                "name": "Loan_Length"
+            },
+            {
+                "type": "string",
+                "name": "Home_Ownership"
+            }
+        ]
+    },
+    "operationMode": "TRAIN_SPLITTED_ONLY"
+}

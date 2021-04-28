@@ -1,0 +1,164 @@
+{
+  "centileShuffle": false,
+  "centileSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "preFilter": {
+    "distinct": false,
+    "enabled": false
+  },
+  "defaultOutputIndex": 1,
+  "seed": 1337,
+  "randomColumns": [],
+  "centileOrders": [],
+  "rangeSetTime": false,
+  "column": "Status",
+  "randomSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "randomColumnsSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "computedColumns": [],
+  "writeComputedColumnsInOutput": false,
+  "mode": "VALUES",
+  "centileTDigest": false,
+  "valueSplits": [
+    {
+      "outputIndex": 0,
+      "caseSensitive": false,
+      "value": "Accepted"
+    }
+  ],
+  "rangeSplits": [
+    {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": []
+        },
+        "distinct": false,
+        "enabled": true
+      },
+      "outputIndex": 0
+    }
+  ],
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "filterSplits": [
+    {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": []
+        },
+        "$status": {
+          "schema": {
+            "columns": [
+              {
+                "name": "id",
+                "type": "bigint"
+              },
+              {
+                "name": "Status",
+                "type": "string"
+              },
+              {
+                "name": "Date_Of_Birth",
+                "type": "string"
+              },
+              {
+                "name": "Date_Of_Birth_parsed",
+                "type": "date"
+              },
+              {
+                "name": "Age",
+                "type": "bigint"
+              },
+              {
+                "name": "Monthly_Income",
+                "type": "double"
+              },
+              {
+                "name": "State",
+                "type": "string"
+              },
+              {
+                "name": "Interest_Rate",
+                "type": "double"
+              },
+              {
+                "name": "FicoAvg",
+                "type": "double"
+              },
+              {
+                "name": "Default",
+                "type": "double"
+              },
+              {
+                "name": "Amount_Requested",
+                "type": "bigint"
+              },
+              {
+                "name": "Loan_Purpose",
+                "type": "string"
+              },
+              {
+                "name": "Loan_Length",
+                "type": "string"
+              },
+              {
+                "name": "Home_Ownership",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "distinct": false,
+        "enabled": true
+      },
+      "outputIndex": 0
+    }
+  ]
+}
