@@ -12,11 +12,13 @@
   },
   "redispatchPartitioning": false,
   "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
   "inputs": {
     "model": {
       "items": [
         {
-          "ref": "wnDatAuP",
+          "ref": "JjkP4kZi",
           "deps": []
         }
       ]
@@ -40,12 +42,13 @@
       ]
     }
   },
+  "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
-      "login": "admin"
+      "login": "leo.treguer"
     },
-    "lastModifiedOn": 1588604446688
+    "lastModifiedOn": 1619599864863
   },
   "creationTag": {
     "versionNumber": 0,
