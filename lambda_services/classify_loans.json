@@ -19,8 +19,6 @@
             "features": {
               "id": 83869,
               "Status": "pending",
-              "Date_Of_Birth": "1994-28-07",
-              "Date_Of_Birth_parsed": "1984-07-28T00:00:00.000Z",
               "Age": 36,
               "Monthly_Income": 9166.67,
               "State": "CT",
