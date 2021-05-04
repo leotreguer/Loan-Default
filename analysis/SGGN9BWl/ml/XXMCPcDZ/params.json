@@ -290,7 +290,7 @@
         "nb_bins_hashing": 1048576,
         "hash_whole_categories": false,
         "dummy_drop": "AUTO",
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "CATEGORY",
         "state": {
           "userModified": false,
@@ -357,7 +357,7 @@
         "nb_bins_hashing": 1048576,
         "hash_whole_categories": false,
         "dummy_drop": "AUTO",
-        "role": "INPUT",
+        "role": "REJECT",
         "type": "CATEGORY",
         "state": {
           "userModified": false,
