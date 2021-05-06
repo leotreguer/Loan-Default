@@ -1,4 +1,5 @@
 {
+  "name": "Loan_requests",
   "endpoints": [
     {
       "modelRef": "JjkP4kZi",
@@ -11,7 +12,28 @@
         "shapleyBackgroundSize": 100,
         "subChunkSize": 5000
       },
-      "testQueries": [],
+      "testQueries": [
+        {
+          "name": "score #1",
+          "q": {
+            "features": {
+              "id": 83869,
+              "Status": "pending",
+              "Date_Of_Birth": "1984-28-07",
+              "Date_Of_Birth_parsed": "1984-07-28T00:00:00.000Z",
+              "Age": 36,
+              "Monthly_Income": 9166.67,
+              "State": "CT",
+              "Interest_Rate": 8.9,
+              "FicoAvg": 737,
+              "Amount_Requested": 35000,
+              "Loan_Purpose": "debt_consolidation",
+              "Loan_Length": "36",
+              "Home_Ownership": "RENT"
+            }
+          }
+        }
+      ],
       "enrichMapping": [],
       "healthCheckQueries": [],
       "returnPostEnrichData": false,
