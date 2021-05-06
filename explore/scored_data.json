@@ -5,16 +5,41 @@
     "columnsSelection": {
       "mode": "ALL"
     },
+    "columnWidthsByName": {
+      "id": 100,
+      "Status": 100,
+      "Date_Of_Birth": 141,
+      "Date_Of_Birth_parsed": 190,
+      "Age": 100,
+      "Monthly_Income": 120,
+      "State": 100,
+      "Interest_Rate": 113,
+      "FicoAvg": 100,
+      "Default": 100,
+      "Amount_Requested": 135,
+      "Loan_Purpose": 141,
+      "Loan_Length": 100,
+      "Home_Ownership": 120,
+      "proba_0.0": 148,
+      "proba_1.0": 148,
+      "prediction": 100
+    },
     "coloring": {
       "scheme": "MEANING_AND_STATUS",
       "individualColumns": [],
       "valueColoringMode": "HASH"
     },
-    "sorting": [],
+    "sorting": [
+      {
+        "column": "proba_1.0",
+        "ascending": false
+      }
+    ],
     "analysisColumnData": {},
     "explorationSampling": {
       "selection": {
         "maxStoredBytes": 104857600,
+        "timeout": -1,
         "filter": {
           "distinct": false,
           "enabled": false
@@ -38,7 +63,9 @@
       "autoRefreshSample": false,
       "_refreshTrigger": 0
     },
-    "exploreUIParams": {},
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
     "globalSearchQuery": "",
     "explorationFilters": [],
     "previewMode": "ALL_ROWS"
