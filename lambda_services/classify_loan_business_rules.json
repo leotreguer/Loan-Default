@@ -5,10 +5,18 @@
       "envSelection": {
         "envMode": "INHERIT"
       },
-      "testQueries": [],
+      "testQueries": [
+        {
+          "q": {
+            "param1": 1,
+            "param2": 1,
+            "param3": 1
+          }
+        }
+      ],
       "inputFolderRefs": [],
       "userFunctionName": "api_py_function",
-      "code": "\n# Insert here initialization code\n\n# This function is the entry point for your Python function API\n# You can call this function with passing \"param1\", \"param2\",\n# \"param3\" as arguments to the API call\n# (see REST API documentation)\ndef api_py_function(param1, param2, param3):\n    return param1 + param2 * param3\n",
+      "code": "\n# Insert here initialization code\n\n# This function is the entry point for your Python function API\n# You can call this function with passing \"param1\", \"param2\",\n# \"param3\" as arguments to the API call\n# (see REST API documentation)\ndef api_py_function(param1, param2, param3):\n    return param1 + param2 + param3\n",
       "id": "business_rules",
       "type": "PY_FUNCTION"
     }
