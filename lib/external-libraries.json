@@ -3,7 +3,8 @@
     "import-plugin-geo": {
       "remote": "https://github.com/dataiku/dss-plugin-geocoder.git",
       "checkout": "refs/heads/master",
-      "remotePath": ""
+      "remotePath": "",
+      "lastHash": "1a64c236e8c35805020b919840feedf38632d357"
     }
   },
   "pythonPath": [
