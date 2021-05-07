@@ -9,9 +9,9 @@ scored_data = dataiku.Dataset("scored_data")
 scored_data_df = scored_data.get_dataframe()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
-scored_data_df.head()
+print(scored_data_df.head())
 
-# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+# ------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 
 # Compute recipe outputs from inputs
 # TODO: Replace this part by your actual code that computes the output, as a Pandas dataframe
