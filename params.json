@@ -155,7 +155,7 @@
       }
     }
   },
-  "name": "demo_loan_default",
+  "name": "Loan Default Prediction",
   "imgPattern": 3,
   "metrics": {
     "probes": [],
@@ -212,11 +212,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 9,
+    "versionNumber": 10,
     "lastModifiedBy": {
       "login": "leo.treguer"
     },
-    "lastModifiedOn": 1619599891936
+    "lastModifiedOn": 1620383976383
   },
   "creationTag": {
     "versionNumber": 0,
