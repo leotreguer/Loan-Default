@@ -1,7 +1,14 @@
 {
-  "gitReferences": {},
+  "gitReferences": {
+    "import-plugin-geo": {
+      "remote": "https://github.com/dataiku/dss-plugin-geocoder.git",
+      "checkout": "refs/heads/master",
+      "remotePath": ""
+    }
+  },
   "pythonPath": [
-    "python"
+    "python",
+    "import-plugin-geo"
   ],
   "rsrcPath": [
     "R"
