@@ -14,6 +14,8 @@ scored_data_df = scored_data.get_dataframe()
 
 scored_data_processed_df = scored_data_df # For this sample code, simply copy input to output
 
+#test
+
 
 # Write recipe outputs
 scored_data_processed = dataiku.Dataset("scored_data_processed")
