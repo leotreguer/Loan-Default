@@ -2,65 +2,6 @@
   "envSelection": {
     "envMode": "USE_BUILTIN_MODE"
   },
-  "core": {
-    "taskType": "PREDICTION",
-    "executionParams": {
-      "envSelection": {
-        "envMode": "USE_BUILTIN_MODE"
-      },
-      "containerSelection": {
-        "containerMode": "INHERIT"
-      },
-      "sparkParams": {
-        "pipelineAllowMerge": true,
-        "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK",
-        "pipelineAllowStart": true,
-        "sparkExecutionEngine": "SPARK_SUBMIT",
-        "sparkConf": {
-          "inheritConf": "default",
-          "conf": []
-        },
-        "sparkRepartitionNonHDFS": 1,
-        "sparkUseGlobalMetastore": false
-      },
-      "sparkCheckpoint": "NONE"
-    },
-    "backendType": "PY_MEMORY",
-    "target_variable": "Default",
-    "weight": {
-      "weightMethod": "CLASS_WEIGHT"
-    },
-    "time": {
-      "ascending": true,
-      "enabled": false
-    },
-    "partitionedModel": {
-      "ssdSelection": {
-        "useMemTable": false,
-        "filter": {
-          "distinct": false,
-          "enabled": false
-        },
-        "latestPartitionsN": 1,
-        "maxRecords": -1,
-        "ordering": {
-          "rules": [],
-          "enabled": false
-        },
-        "withinFirstN": -1,
-        "partitionSelectionMethod": "ALL",
-        "targetRatio": 0.02,
-        "maxReadUncompressedBytes": -1,
-        "samplingMethod": "FULL"
-      },
-      "enabled": false
-    },
-    "calibration": {
-      "calibrationMethod": "NO_CALIBRATION"
-    },
-    "prediction_type": "BINARY_CLASSIFICATION"
-  },
-  "operationMode": "TRAIN_SPLITTED_ONLY",
   "modeling": {
     "computeLearningCurves": false,
     "max_ensemble_nodes_serialized": 0,
@@ -126,6 +67,7 @@
       "splitRatio": 0.8,
       "timeout": 0,
       "mode": "KFOLD",
+      "cvSeed": 1337,
       "nJobs": 4,
       "nIter": 0,
       "strategy": "GRID",
@@ -136,8 +78,7 @@
     "algorithm": "LOGISTIC_REGRESSION",
     "gridLength": 5
   },
-  "partSource": "ACTIVE_VERSION",
-  "generatingModelId": "A-DEMO_LOAN_DEFAULT-SGGN9BWl-XXMCPcDZ-s1-pp2-m1",
+  "generatingModelId": "A-DEMO_LOAN_DEFAULT-SGGN9BWl-XXMCPcDZ-s4-pp2-m1",
   "preprocessing": {
     "reduce": {
       "kept_variance": 0.0,
@@ -243,6 +184,29 @@
         },
         "impute_constant_value": 0.0
       },
+      "Loan_Purpose": {
+        "nb_bins_hashing": 1048576,
+        "min_samples": 10,
+        "missing_impute_with": "MODE",
+        "role": "REJECT",
+        "dummy_drop": "NONE",
+        "dummy_clip": "MAX_NB_CATEGORIES",
+        "cumulative_proportion": 0.95,
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "type": "CATEGORY",
+        "customProcessorWantsMatrix": false,
+        "missing_handling": "NONE",
+        "category_handling": "DUMMIFY",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "Text",
+          "userModified": true
+        },
+        "hash_whole_categories": false,
+        "max_nb_categories": 100,
+        "max_cat_safety": 200
+      },
       "Interest_Rate": {
         "rescaling": "AVGSTD",
         "missing_impute_with": "MEAN",
@@ -263,52 +227,6 @@
           "userModified": false
         },
         "impute_constant_value": 0.0
-      },
-      "Loan_Purpose": {
-        "nb_bins_hashing": 1048576,
-        "min_samples": 10,
-        "missing_impute_with": "MODE",
-        "role": "INPUT",
-        "dummy_drop": "DROP",
-        "dummy_clip": "MAX_NB_CATEGORIES",
-        "cumulative_proportion": 0.95,
-        "sendToInput": "main",
-        "customHandlingCode": "",
-        "type": "CATEGORY",
-        "customProcessorWantsMatrix": false,
-        "missing_handling": "NONE",
-        "category_handling": "DUMMIFY",
-        "state": {
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "Text",
-          "userModified": false
-        },
-        "hash_whole_categories": false,
-        "max_nb_categories": 100,
-        "max_cat_safety": 200
-      },
-      "Date_Of_Birth": {
-        "nb_bins_hashing": 1048576,
-        "min_samples": 10,
-        "missing_impute_with": "MODE",
-        "role": "REJECT",
-        "dummy_drop": "DROP",
-        "dummy_clip": "MAX_NB_CATEGORIES",
-        "cumulative_proportion": 0.95,
-        "sendToInput": "main",
-        "customHandlingCode": "",
-        "type": "CATEGORY",
-        "customProcessorWantsMatrix": false,
-        "missing_handling": "NONE",
-        "category_handling": "DUMMIFY",
-        "state": {
-          "autoModifiedByDSS": false,
-          "recordedMeaning": "DateSource",
-          "userModified": false
-        },
-        "hash_whole_categories": false,
-        "max_nb_categories": 100,
-        "max_cat_safety": 200
       },
       "Date_Of_Birth_parsed": {
         "rescaling": "AVGSTD",
@@ -348,11 +266,34 @@
         "impute_constant_value": 0.0,
         "binarize_threshold_mode": "MEDIAN"
       },
+      "Date_Of_Birth": {
+        "nb_bins_hashing": 1048576,
+        "min_samples": 10,
+        "missing_impute_with": "MODE",
+        "role": "REJECT",
+        "dummy_drop": "DROP",
+        "dummy_clip": "MAX_NB_CATEGORIES",
+        "cumulative_proportion": 0.95,
+        "sendToInput": "main",
+        "customHandlingCode": "",
+        "type": "CATEGORY",
+        "customProcessorWantsMatrix": false,
+        "missing_handling": "NONE",
+        "category_handling": "DUMMIFY",
+        "state": {
+          "autoModifiedByDSS": false,
+          "recordedMeaning": "DateSource",
+          "userModified": false
+        },
+        "hash_whole_categories": false,
+        "max_nb_categories": 100,
+        "max_cat_safety": 200
+      },
       "Home_Ownership": {
         "nb_bins_hashing": 1048576,
         "min_samples": 10,
         "missing_impute_with": "MODE",
-        "role": "INPUT",
+        "role": "REJECT",
         "dummy_drop": "DROP",
         "dummy_clip": "MAX_NB_CATEGORIES",
         "cumulative_proportion": 0.95,
@@ -375,7 +316,7 @@
         "nb_bins_hashing": 1048576,
         "min_samples": 10,
         "missing_impute_with": "MODE",
-        "role": "INPUT",
+        "role": "REJECT",
         "dummy_drop": "DROP",
         "dummy_clip": "MAX_NB_CATEGORIES",
         "cumulative_proportion": 0.95,
@@ -515,12 +456,12 @@
   "expectedPreparationOutputSchema": {
     "columns": [
       {
-        "name": "id",
+        "name": "Age",
         "type": "bigint"
       },
       {
-        "name": "Status",
-        "type": "string"
+        "name": "Amount_Requested",
+        "type": "bigint"
       },
       {
         "name": "Date_Of_Birth",
@@ -531,23 +472,19 @@
         "type": "date"
       },
       {
-        "name": "Age",
-        "type": "bigint"
-      },
-      {
-        "name": "Monthly_Income",
+        "name": "FicoAvg",
         "type": "double"
       },
       {
-        "name": "State",
+        "name": "Home_Ownership",
         "type": "string"
       },
       {
-        "name": "Interest_Rate",
-        "type": "double"
+        "name": "id",
+        "type": "bigint"
       },
       {
-        "name": "FicoAvg",
+        "name": "Interest_Rate",
         "type": "double"
       },
       {
@@ -555,7 +492,7 @@
         "type": "double"
       },
       {
-        "name": "Amount_Requested",
+        "name": "Loan_Length",
         "type": "bigint"
       },
       {
@@ -563,47 +500,22 @@
         "type": "string"
       },
       {
-        "name": "Loan_Length",
-        "type": "bigint"
+        "name": "Monthly_Income",
+        "type": "double"
       },
       {
-        "name": "Home_Ownership",
+        "name": "Status",
+        "type": "string"
+      },
+      {
+        "name": "State",
         "type": "string"
       }
     ],
     "userModified": false
   },
-  "splitParams": {
-    "testOnLargerValues": true,
-    "instanceIdRefresher": 0,
-    "ssdSeed": 1337,
-    "nFolds": 5,
-    "subSamplingSeed": 1337,
-    "ssdSplitMode": "RANDOM",
-    "splitBeforePrepare": true,
-    "ssdSelection": {
-      "useMemTable": false,
-      "filter": {
-        "distinct": false,
-        "enabled": false
-      },
-      "latestPartitionsN": 1,
-      "maxRecords": 100000,
-      "ordering": {
-        "rules": [],
-        "enabled": false
-      },
-      "withinFirstN": -1,
-      "partitionSelectionMethod": "ALL",
-      "targetRatio": 0.02,
-      "maxReadUncompressedBytes": -1,
-      "samplingMethod": "HEAD_SEQUENTIAL"
-    },
-    "ssdTrainingRatio": 0.8,
-    "ttPolicy": "SPLIT_SINGLE_DATASET",
-    "kfold": false
-  },
   "script": {
+    "contextProjectKey": "DEMO_LOAN_DEFAULT",
     "columnsSelection": {
       "mode": "ALL"
     },
@@ -648,6 +560,132 @@
       "individualColumns": [],
       "valueColoringMode": "HASH"
     }
+  },
+  "core": {
+    "taskType": "PREDICTION",
+    "diagnosticsSettings": {
+      "settings": [
+        {
+          "type": "ML_DIAGNOSTICS_DATASET_SANITY_CHECKS",
+          "enabled": true
+        },
+        {
+          "type": "ML_DIAGNOSTICS_MODELING_PARAMETERS",
+          "enabled": true
+        },
+        {
+          "type": "ML_DIAGNOSTICS_RUNTIME",
+          "enabled": true
+        },
+        {
+          "type": "ML_DIAGNOSTICS_TRAINING_OVERFIT",
+          "enabled": true
+        },
+        {
+          "type": "ML_DIAGNOSTICS_LEAKAGE_DETECTION",
+          "enabled": true
+        },
+        {
+          "type": "ML_DIAGNOSTICS_MODEL_CHECK",
+          "enabled": true
+        },
+        {
+          "type": "ML_DIAGNOSTICS_ML_ASSERTIONS",
+          "enabled": true
+        }
+      ],
+      "enabled": true
+    },
+    "executionParams": {
+      "envSelection": {
+        "envMode": "USE_BUILTIN_MODE"
+      },
+      "containerSelection": {
+        "containerMode": "INHERIT"
+      },
+      "sparkParams": {
+        "pipelineAllowMerge": true,
+        "sparkPreparedDFStorageLevel": "MEMORY_AND_DISK",
+        "pipelineAllowStart": true,
+        "sparkExecutionEngine": "SPARK_SUBMIT",
+        "sparkConf": {
+          "inheritConf": "default",
+          "conf": []
+        },
+        "sparkRepartitionNonHDFS": 1,
+        "sparkUseGlobalMetastore": false
+      },
+      "sparkCheckpoint": "NONE"
+    },
+    "backendType": "PY_MEMORY",
+    "target_variable": "Default",
+    "weight": {
+      "weightMethod": "CLASS_WEIGHT"
+    },
+    "time": {
+      "ascending": true,
+      "enabled": false
+    },
+    "partitionedModel": {
+      "ssdSelection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxRecords": -1,
+        "ordering": {
+          "rules": [],
+          "enabled": false
+        },
+        "withinFirstN": -1,
+        "partitionSelectionMethod": "ALL",
+        "targetRatio": 0.02,
+        "maxReadUncompressedBytes": -1,
+        "samplingMethod": "FULL"
+      },
+      "enabled": false
+    },
+    "calibration": {
+      "calibrationMethod": "NO_CALIBRATION"
+    },
+    "prediction_type": "BINARY_CLASSIFICATION"
+  },
+  "operationMode": "TRAIN_SPLITTED_ONLY",
+  "partSource": "ACTIVE_VERSION",
+  "assertionsParams": {
+    "assertions": []
+  },
+  "splitParams": {
+    "testOnLargerValues": true,
+    "instanceIdRefresher": 0,
+    "ssdSeed": 1337,
+    "nFolds": 5,
+    "subSamplingSeed": 1337,
+    "ssdSplitMode": "RANDOM",
+    "splitBeforePrepare": true,
+    "ssdSelection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": 100000,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL"
+    },
+    "ssdTrainingRatio": 0.8,
+    "ttPolicy": "SPLIT_SINGLE_DATASET",
+    "kfold": false
   },
   "sparkParams": {
     "pipelineAllowMerge": true,

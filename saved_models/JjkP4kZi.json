@@ -3,7 +3,7 @@
   "rebuildBehavior": "EXPLICIT",
   "name": "Prediction (LOGISTIC_REGRESSION) on train",
   "contentType": "prediction/py_memory",
-  "activeVersion": "initial",
+  "activeVersion": "1624903307986",
   "conditionalOutputs": [],
   "partitioning": {
     "ignoreNonMatchingFile": false,
@@ -15,7 +15,7 @@
     "rebuildBehavior": "NORMAL",
     "crossProjectBuildBehavior": "DEFAULT"
   },
-  "lastExportedFrom": "A-DEMO_LOAN_DEFAULT-SGGN9BWl-XXMCPcDZ-s1-pp2-m1",
+  "lastExportedFrom": "A-DEMO_LOAN_DEFAULT-SGGN9BWl-XXMCPcDZ-s4-pp2-m1",
   "metrics": {
     "probes": [],
     "engineConfig": {
@@ -1630,11 +1630,12 @@
         "splitRatio": 0.8,
         "shuffleIterations": 1,
         "nFolds": 5,
+        "cvSeed": 1337,
         "stratified": true,
         "strategy": "GRID",
         "bayesianOptimizer": "SCIKIT_OPTIMIZE",
         "randomized": true,
-        "seed": 0,
+        "seed": 1337,
         "nIter": 0,
         "nIterRandom": 10,
         "timeout": 0,
@@ -1787,11 +1788,11 @@
     "labels": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
-      "login": "leo.treguer"
+      "login": "admin"
     },
-    "lastModifiedOn": 1619599850715
+    "lastModifiedOn": 1624903308136
   },
   "creationTag": {
     "versionNumber": 0,
