@@ -7,11 +7,13 @@
   },
   "redispatchPartitioning": false,
   "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
   "inputs": {
     "main": {
       "items": [
         {
-          "ref": "dataset_joined",
+          "ref": "dataset_joined_prepared",
           "deps": []
         }
       ]
@@ -31,12 +33,13 @@
       ]
     }
   },
+  "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588603797110
+    "lastModifiedOn": 1624903203229
   },
   "creationTag": {
     "versionNumber": 0,
