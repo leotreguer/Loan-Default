@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588603797058
+    "lastModifiedOn": 1624903202929
   },
   "creationTag": {
     "versionNumber": 0,
@@ -87,12 +87,12 @@
   "schema": {
     "columns": [
       {
-        "name": "id",
+        "name": "Age",
         "type": "bigint"
       },
       {
-        "name": "Status",
-        "type": "string"
+        "name": "Amount_Requested",
+        "type": "bigint"
       },
       {
         "name": "Date_Of_Birth",
@@ -103,23 +103,19 @@
         "type": "date"
       },
       {
-        "name": "Age",
-        "type": "bigint"
-      },
-      {
-        "name": "Monthly_Income",
+        "name": "FicoAvg",
         "type": "double"
       },
       {
-        "name": "State",
+        "name": "Home_Ownership",
         "type": "string"
       },
       {
-        "name": "Interest_Rate",
-        "type": "double"
+        "name": "id",
+        "type": "bigint"
       },
       {
-        "name": "FicoAvg",
+        "name": "Interest_Rate",
         "type": "double"
       },
       {
@@ -127,7 +123,7 @@
         "type": "double"
       },
       {
-        "name": "Amount_Requested",
+        "name": "Loan_Length",
         "type": "bigint"
       },
       {
@@ -135,16 +131,21 @@
         "type": "string"
       },
       {
-        "name": "Loan_Length",
+        "name": "Monthly_Income",
+        "type": "double"
+      },
+      {
+        "name": "Status",
         "type": "string"
       },
       {
-        "name": "Home_Ownership",
+        "name": "State",
         "type": "string"
       }
     ],
     "userModified": true
   },
+  "dkuProperties": [],
   "metrics": {
     "probes": [
       {
