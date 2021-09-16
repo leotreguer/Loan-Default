@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588603070359
+    "lastModifiedOn": 1631798058536
   },
   "creationTag": {
     "versionNumber": 0,
@@ -72,7 +72,9 @@
     },
     "lastModifiedOn": 1588602782017
   },
-  "tags": [],
+  "tags": [
+    "Customer data preparation"
+  ],
   "params": {
     "connection": "filesystem_managed",
     "path": "${projectKey}/customer_information_prepared",
@@ -129,6 +131,7 @@
     ],
     "userModified": true
   },
+  "dkuProperties": [],
   "metrics": {
     "probes": [
       {

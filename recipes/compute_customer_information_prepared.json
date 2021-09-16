@@ -48,6 +48,8 @@
   },
   "redispatchPartitioning": false,
   "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
   "inputs": {
     "main": {
       "items": [
@@ -68,12 +70,13 @@
       ]
     }
   },
+  "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588603070423
+    "lastModifiedOn": 1631798058527
   },
   "creationTag": {
     "versionNumber": 0,
@@ -82,7 +85,9 @@
     },
     "lastModifiedOn": 1588602782018
   },
-  "tags": [],
+  "tags": [
+    "Customer data preparation"
+  ],
   "customFields": {},
   "checklists": {
     "checklists": []
