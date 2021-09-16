@@ -72,11 +72,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1624902590820
+    "lastModifiedOn": 1631797777574
   },
   "creationTag": {
     "versionNumber": 0,
@@ -85,6 +85,7 @@
     },
     "lastModifiedOn": 1624902491423
   },
+  "shortDesc": "This prepare recipe parses date",
   "tags": [],
   "customFields": {},
   "checklists": {
