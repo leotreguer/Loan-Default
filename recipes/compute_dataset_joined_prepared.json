@@ -72,11 +72,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1631797777574
+    "lastModifiedOn": 1631797820478
   },
   "creationTag": {
     "versionNumber": 0,
@@ -89,6 +89,21 @@
   "tags": [],
   "customFields": {},
   "checklists": {
-    "checklists": []
+    "checklists": [
+      {
+        "id": "70c396",
+        "title": "Todo list",
+        "createdOn": 0,
+        "items": [
+          {
+            "done": false,
+            "text": "add something to do",
+            "createdOn": 1631797820403,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          }
+        ]
+      }
+    ]
   }
 }
