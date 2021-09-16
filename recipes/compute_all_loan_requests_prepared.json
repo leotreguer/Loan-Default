@@ -48,6 +48,8 @@
   },
   "redispatchPartitioning": false,
   "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
   "inputs": {
     "main": {
       "items": [
@@ -68,12 +70,13 @@
       ]
     }
   },
+  "labels": [],
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1588603706672
+    "lastModifiedOn": 1631798082450
   },
   "creationTag": {
     "versionNumber": 0,
@@ -82,7 +85,9 @@
     },
     "lastModifiedOn": 1588603221705
   },
-  "tags": [],
+  "tags": [
+    "Loan Data Preparation"
+  ],
   "customFields": {},
   "checklists": {
     "checklists": []
