@@ -66,49 +66,12 @@
     },
     {
       "preview": false,
-      "designTimeReport": {
-        "report": {
-          "createdColumnCount": 2
-        }
-      },
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnSplitter",
-      "params": {
-        "inCol": "FICO_Range",
-        "keepEmptyChunks": false,
-        "limit": 0,
-        "separator": "-",
-        "outColPrefix": "FICO_Range_",
-        "limitOutput": false,
-        "target": "COLUMNS"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
       "type": "CreateColumnWithGREL",
       "params": {
         "expression": "(FICO_Range_0+FICO_Range_1)/2",
         "column": "FicoAvg"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnsSelector",
-      "params": {
-        "columns": [
-          "FICO_Range",
-          "FICO_Range_1",
-          "FICO_Range_0"
-        ],
-        "keep": false,
-        "appliesTo": "COLUMNS"
       },
       "alwaysShowComment": false
     }
@@ -120,7 +83,18 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "Status": 100,
+    "FicoAvg": 100,
+    "Monthly_Income": 120,
+    "State": 100,
+    "Interest_Rate": 113,
+    "id": 100,
+    "Date_Of_Birth": 141,
+    "Date_Of_Birth_parsed": 190,
+    "Default": 100,
+    "Age": 100
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {

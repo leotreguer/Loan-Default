@@ -11,6 +11,9 @@
           "map": {
             "customer_information": {
               "repartition": 10
+            },
+            "customer_information_prepared": {
+              "repartition": 10
             }
           }
         },
@@ -72,11 +75,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1631798306069
+    "lastModifiedOn": 1631798315210
   },
   "creationTag": {
     "versionNumber": 0,
