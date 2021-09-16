@@ -51,6 +51,10 @@
   "tutorialProject": false,
   "settings": {
     "flowAnchorSourcesAndSinks": true,
+    "flowDisplaySettings": {
+      "zonesGraphRenderingAlgorithm": "DOT_OLDRANK",
+      "zonesGraphConnectZones": true
+    },
     "gitCommitMode": "AUTO",
     "useRemoteGit": true,
     "disableAutomaticTriggers": false,
@@ -213,11 +217,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 11,
+    "versionNumber": 12,
     "lastModifiedBy": {
-      "login": "leo.treguer"
+      "login": "admin"
     },
-    "lastModifiedOn": 1620384444980
+    "lastModifiedOn": 1631797564342
   },
   "creationTag": {
     "versionNumber": 0,
@@ -226,6 +230,7 @@
     },
     "lastModifiedOn": 1588602460987
   },
+  "description": "## Title\n\n### sub-title",
   "shortDesc": "The project *DEMO_LOAN_DEFAULT* was created by Administrator on May 11th 2020",
   "tags": [
     "imported"
