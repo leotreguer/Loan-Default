@@ -110,6 +110,17 @@
         "appliesTo": "COLUMNS"
       },
       "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if(Interest_Rate\u003e10,1,0)",
+        "column": "Interest_Rate_high"
+      },
+      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
@@ -131,6 +142,7 @@
     "Default": 100,
     "Home_Ownership": 120,
     "State": 100,
+    "Interest_Rate_high": 150,
     "Loan_Length": 100,
     "id": 100,
     "Age": 100
