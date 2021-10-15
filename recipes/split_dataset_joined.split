@@ -129,6 +129,10 @@
                 "type": "double"
               },
               {
+                "name": "Interest_Rate_high",
+                "type": "bigint"
+              },
+              {
                 "name": "Default",
                 "type": "double"
               },
