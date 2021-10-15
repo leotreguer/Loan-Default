@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1624903203070
+    "lastModifiedOn": 1634300184942
   },
   "creationTag": {
     "versionNumber": 0,
@@ -117,6 +117,10 @@
       {
         "name": "Interest_Rate",
         "type": "double"
+      },
+      {
+        "name": "Interest_Rate_high",
+        "type": "bigint"
       },
       {
         "name": "Default",
