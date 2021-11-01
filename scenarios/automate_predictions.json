@@ -3,20 +3,20 @@
   "id": "automate_predictions",
   "type": "step_based",
   "name": "automate_predictions",
-  "active": false,
+  "active": true,
   "creationTag": {
-    "versionNumber": 1,
-    "lastModifiedBy": {
-      "login": "admin"
-    },
-    "lastModifiedOn": 1635759102993
-  },
-  "versionTag": {
     "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
     "lastModifiedOn": 1635759105434
+  },
+  "versionTag": {
+    "versionNumber": 3,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1635759236863
   },
   "checklists": {
     "checklists": []
