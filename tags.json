@@ -3,12 +3,20 @@
     "duplicated": {
       "color": "#3A85AD"
     },
+    "Customer data preparation": {
+      "color": "#94be8e"
+    },
+    "deleted-recipe-editor": {
+      "color": "#90a8b7"
+    },
     "imported": {
       "color": "#263238"
     },
-    "recipe-editor": {},
-    "Customer data preparation": {},
-    "Loan Data Preparation": {},
-    "deleted-recipe-editor": {}
+    "recipe-editor": {
+      "color": "#1ac2ab"
+    },
+    "Loan Data Preparation": {
+      "color": "#28aadd"
+    }
   }
 }
