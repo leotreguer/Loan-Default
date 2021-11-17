@@ -9,7 +9,8 @@
     "test": {
       "remote": "https://github.com/pmasiphelps/gan_finance_libs.git",
       "checkout": "refs/heads/master",
-      "remotePath": ""
+      "remotePath": "",
+      "lastHash": "ac617f43512eafd5f06725a96e1d18c2bb637918"
     }
   },
   "pythonPath": [
