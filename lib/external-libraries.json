@@ -5,11 +5,17 @@
       "checkout": "refs/heads/master",
       "remotePath": "",
       "lastHash": "1a64c236e8c35805020b919840feedf38632d357"
+    },
+    "test": {
+      "remote": "https://github.com/pmasiphelps/gan_finance_libs.git",
+      "checkout": "refs/heads/master",
+      "remotePath": ""
     }
   },
   "pythonPath": [
     "python",
-    "import-plugin-geo"
+    "import-plugin-geo",
+    "test"
   ],
   "rsrcPath": [
     "R"
