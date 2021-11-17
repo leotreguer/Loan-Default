@@ -17,7 +17,6 @@ test_output_dataset_df = scored_data_df # For this sample code, simply copy inpu
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 test_output_dataset_df["new_column"]=test_output_dataset_df["Amount_Requested"]/10
-test_output_dataset_df.head()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
