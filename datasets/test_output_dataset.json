@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1637141825733
+    "lastModifiedOn": 1637142429981
   },
   "creationTag": {
     "versionNumber": 0,
@@ -57,8 +57,81 @@
     "readSQLDateColsAsDSSDates": true
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "Age",
+        "type": "bigint"
+      },
+      {
+        "name": "Amount_Requested",
+        "type": "bigint"
+      },
+      {
+        "name": "Date_Of_Birth",
+        "type": "string"
+      },
+      {
+        "name": "Date_Of_Birth_parsed",
+        "type": "date"
+      },
+      {
+        "name": "FicoAvg",
+        "type": "double"
+      },
+      {
+        "name": "Home_Ownership",
+        "type": "string"
+      },
+      {
+        "name": "id",
+        "type": "bigint"
+      },
+      {
+        "name": "Interest_Rate",
+        "type": "double"
+      },
+      {
+        "name": "Default",
+        "type": "double"
+      },
+      {
+        "name": "Loan_Length",
+        "type": "bigint"
+      },
+      {
+        "name": "Loan_Purpose",
+        "type": "string"
+      },
+      {
+        "name": "Monthly_Income",
+        "type": "double"
+      },
+      {
+        "name": "Status",
+        "type": "string"
+      },
+      {
+        "name": "State",
+        "type": "string"
+      },
+      {
+        "name": "proba_0.0",
+        "type": "double"
+      },
+      {
+        "name": "proba_1.0",
+        "type": "double"
+      },
+      {
+        "name": "prediction",
+        "type": "double"
+      },
+      {
+        "name": "new_column",
+        "type": "double"
+      }
+    ],
+    "userModified": false
   },
   "dkuProperties": [],
   "metrics": {
