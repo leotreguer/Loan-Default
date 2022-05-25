@@ -1,7 +1,17 @@
 {
   "dashboardAuthorizations": {
     "allAuthorized": false,
-    "authorizations": []
+    "authorizations": [
+      {
+        "objectRef": {
+          "objectId": "scored_data",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      }
+    ]
   },
   "exposedObjects": {
     "objects": []
@@ -44,6 +54,7 @@
     }
   },
   "owner": "leo.treguer",
+  "permissionsVersion": "LEGACY",
   "permissions": [],
   "additionalDashboardUsers": {
     "users": []
@@ -158,7 +169,8 @@
         },
         "deploymentModifier": {}
       }
-    }
+    },
+    "dkuProperties": []
   },
   "name": "Loan Default Prediction",
   "imgPattern": 3,
@@ -217,11 +229,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 13,
+    "versionNumber": 14,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1636636280483
+    "lastModifiedOn": 1653474189055
   },
   "creationTag": {
     "versionNumber": 0,
