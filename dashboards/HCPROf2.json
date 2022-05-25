@@ -32,8 +32,8 @@
             "box": {
               "top": 0,
               "left": 3,
-              "width": 2,
-              "height": 2
+              "width": 6,
+              "height": 3
             },
             "clickAction": "OPEN_INSIGHT",
             "tileParams": {
@@ -60,11 +60,11 @@
   "name": "fifththird_loandefault\u0027s default dashboard",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1653474594793
+    "lastModifiedOn": 1653474600588
   },
   "creationTag": {
     "versionNumber": 0,
