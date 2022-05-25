@@ -250,7 +250,7 @@
           "gridLonDeg": 0.5,
           "gridLatDeg": 0.5
         },
-        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAAAkpJREFUeF7tnUEuREEURes3PWAsYQWGVmAFEmEFNkEiMRNjEktpZr0D6zA1MjHRTcyYvXr/376pcozrvX//PfVu1cBnKPx07cDQ9dvxcgXAnW8CAAO4cwc6fz0mGMCdO9D56zHBAA44cLPYD6zSL5nPP8rtybv+Qe08YZoJvn46LutyZ3/t3e0zAP+lAGD7rtQKALDWX3t3ANsRaAUAWOuvvTuA7Qi0AgCs9dfeHcB2BFoBANb6a+8OYDsCrQAAa/21dwewHYFWAIC1/tq7A9iOQCsAwFp/7d0BbEegFQBgrb/27gC2I9AKALDWX3t3ANsRaAUAWOuvvTuA7Qi0AgCs9dfeHcB2BFoBANb6a+8OYDsCrQAAa/21dwdwFMHl8150qXzd/elb9BkAjjp1tTgqw/AYXS5bt1pflIfz12h/AEedAnDnXxcCGMDRMBi1jogWfQDOBDPBoyYzWswEM8G/9wq36OjkENFEdHSvjFpHRBPRRHRmhIhoIjqzb6priGgimoiuHptSChFNRGf2TXUNEU1EE9HVY0NE9//HSDmDOYMzwVBdwxnMGcwZXD02nMGcwZlNk6khooloIjozOdyiuUVn9k11DRFNRBPR1WPDLZpbdGbTZGqIaCKaiM5Mzr+/RX8NBxnfJq3Z2VrK/vPZD+DZ7HBSvZlmn6uXzX9dmBFKzUYcmOYX3zcilYdkHABwxrWGagDcEKyMVABnXGuoBsANwcpIBXDGtYZqANwQrIxUAGdca6gGwA3BykgFcMa1hmoA3BCsjNRvEQroYMrgJ5EAAAAASUVORK5CYII\u003d",
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAAAkdJREFUeF7tnTFOw0AQRcfCQLgDLeIS9EgcgJwCUZEeGhoOgLgDBUJcCk5AEyNSgWh2B39/7eql3hl//7fz14piGIJP1w4MXd8dNxcA7nwTABjAnTvQ+e0xwQDu3IHOb48JBnCBAzevJzHEWcFK7ZLtwVs8nL9rL9JW93km+BtwTE/2W58O1wD+TQHA9l2pFQBgrb/27gC2I9AKALDWX3t3ANsRaAUAWOuvvTuA7Qi0AgCs9dfeHcB2BFoBANb6a+8OYDsCrQAAa/21dwewHYFWAIC1/tq7A9iOQCsAwFp/7d0BbEegFQBgrb/27gC2I9AKALDWX3t3ANsRaAUAWOuvvTuA7Qi0AgCs9dfeHcB2BFoBANb6a+8O4FIEm+fj0qXSdXtHn3F/8VF6DQCXOrV5OY1peCxdLls3jpcAVrgL4M7fLgQwgBXB8acnES16AZwJZoKZYLUDyjf8mWAmWL1/d/05gzmDf240vugoHTsimogu3Sv/WkdEE9FEdGaEiGgiOrNvqmuIaCKaiK4em4ggoonozL6priGiiWgiunpsiOj+/5wwZzBncCYYqms4gzmDOYOrx4YzmDM4s2kyNUQ0EU1EZyaHp2ieojP7prqGiCaiiejqseEpmqfozKbJ1Pgienud0TtrzbS6k/3ns91DVlzNqjfTbNy/Xf7twoxQahZxYJ6fzS4ilYtkHABwxrWGagDcEKyMVABnXGuoBsANwcpIBXDGtYZqANwQrIxUAGdca6gGwA3BykgFcMa1hmoA3BCsjNQvkRAGb1IDOiUAAAAASUVORK5CYII\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT"
@@ -259,41 +259,19 @@
     },
     {
       "copySelectionFromScript": true,
-      "engineType": "SQL",
-      "refreshableSelection": {
-        "selection": {
-          "useMemTable": false,
-          "filter": {
-            "distinct": false,
-            "enabled": false
-          },
-          "partitionSelectionMethod": "ALL",
-          "latestPartitionsN": 1,
-          "ordering": {
-            "enabled": false,
-            "rules": []
-          },
-          "samplingMethod": "FULL",
-          "maxRecords": -1,
-          "targetRatio": 0.02,
-          "withinFirstN": -1,
-          "maxReadUncompressedBytes": -1
-        },
-        "autoRefreshSample": false,
-        "_refreshTrigger": 1653474228948
-      },
+      "engineType": "LINO",
       "def": {
         "type": "grouped_columns",
         "variant": "normal",
-        "name": "Avg. of prediction by FicoAvg",
-        "userEditedName": false,
+        "name": "Average Interest Rate by Age and Fico Score",
+        "userEditedName": true,
         "genericDimension0": [
           {
-            "column": "FicoAvg",
+            "column": "Age",
             "type": "NUMERICAL",
             "numParams": {
               "mode": "FIXED_NB",
-              "nbBins": "100",
+              "nbBins": 10,
               "binSize": 100,
               "emptyBinsMode": "ZEROS"
             },
@@ -311,12 +289,12 @@
               {
                 "type": "AGGREGATION",
                 "measureIdx": 0,
-                "label": "Average of prediction, descending"
+                "label": "Average of Interest_Rate, descending"
               },
               {
                 "type": "AGGREGATION",
                 "measureIdx": 0,
-                "label": "Average of prediction, ascending",
+                "label": "Average of Interest_Rate, ascending",
                 "sortAscending": true
               }
             ],
@@ -327,12 +305,51 @@
             }
           }
         ],
-        "genericDimension1": [],
+        "genericDimension1": [
+          {
+            "column": "FicoAvg",
+            "type": "NUMERICAL",
+            "numParams": {
+              "mode": "FIXED_NB",
+              "nbBins": 5,
+              "binSize": 100,
+              "emptyBinsMode": "ZEROS"
+            },
+            "maxValues": 100,
+            "generateOthersCategory": true,
+            "oneTickPerBin": false,
+            "filters": [],
+            "isA": "dimension",
+            "possibleSorts": [
+              {
+                "type": "NATURAL",
+                "label": "Natural ordering",
+                "sortAscending": true
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Average of Interest_Rate, descending"
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Average of Interest_Rate, ascending",
+                "sortAscending": true
+              }
+            ],
+            "sort": {
+              "type": "NATURAL",
+              "label": "Natural ordering",
+              "sortAscending": true
+            }
+          }
+        ],
         "facetDimension": [],
         "animationDimension": [],
         "genericMeasures": [
           {
-            "column": "prediction",
+            "column": "Interest_Rate",
             "function": "AVG",
             "type": "NUMERICAL",
             "displayed": true,
@@ -340,8 +357,7 @@
             "displayAxis": "axis1",
             "displayType": "column",
             "computeMode": "NORMAL",
-            "computeModeDim": 0,
-            "multiplier": "Auto"
+            "computeModeDim": 0
           }
         ],
         "xDimension": [],
@@ -422,7 +438,6 @@
           "defaultRadius": 5.0,
           "singleShape": "FILLED_CIRCLE"
         },
-        "computeMode": "NORMAL",
         "xAxisMode": "NORMAL",
         "yAxisMode": "NORMAL",
         "pieOptions": {
@@ -440,7 +455,7 @@
           "gridLonDeg": 0.5,
           "gridLatDeg": 0.5
         },
-        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAAA4pJREFUeF7t1L9rU1EUB/Bz33utmgZFIqYFMXUQpIN/Qx0cpD6dBBFc3BQXaWvbqYoI/aEgOHTXwcVF2ghOCq4OnVwEIaEYUlpcYlqTd++Vm5fSVBvpmeK5fkuHJvm+23O+n94qwpfXDSivt8NyBGDP/wgADGDPG/B8PdxgAHvegOfr4Qb/j8DDk8V7FNBXq826DelKeT6ecT2cni4uaaMeR8petdZUywvx6+HJ4qAJabY8N3bbZQpTy48sRe8U6WOk1Ehpbmxx59nksBn/9iCuj86+j9x7Hx5eSDzvt+fr7XuDuwEXplZeJjaY+QNY0bPywtj1vwEX7q8Umxl7zQEXplduWWuT8nz8oucNeD4AgAG8+y8aN1jeXwNusDwz1sQAZtUlLwxgeWasiQHMqkteGMDyzFgTA5hVl7wwgOWZsSYGMKsueWEAyzNjTQxgVl3ywgCWZ8aaGMCsuuSFASzPjDUxgFl1yQsDWJ4Za2IAs+qSFwawPDPWxABm1SUvDGB5ZqyJAcyqS14YwPLMWBP3FJiS8JMK9HBpMX7LmhrhAzfQe+DI3C3NX75z4IkRZDUAYFZd8sIAlmfGmhjArLrkhQEsz4w1MYBZdckLA1ieGWtiALPqkhcGsDwz1sQAZtUlLwxgeWasiQHMqkteGMDyzFgTA5hVl7wwgOWZsSYGMKsueWEAyzNjTQxgVl3ywgCWZ8aaGMCsuuSFASzPjDUxgFl1yQsDWJ4Za2IAs+qSFwawPDPWxABm1SUvDGB5ZqyJAcyqS14YwPLMWBMDmFWXvDCA5ZmxJgYwqy55YQDLM2NN/E8Bn5l4c76pgq21xfgLawuEuzbQFTiIgpJtmA0d6dHkiHriTuirq3Ed6FeB7bsUGFpvDOjl/u3opDX6ZjNjn7pMtKUmlI0+KqWPGmvPJZnB50SV1rPNjF0iGqr3bVdvGGN0kISrNjRxMmBb54e14GJ0iFbrPzc3wuyIde/p2mcVZo+3fiYaIl3bVHkiqrZeV2n3M5ftV2E2Z4eIaK222dotzDbaz7rPvyuiPLnnN842LFVcstJRTnp+enq+9R3+SJ93Z6fn5dqvfz9/77Npbu/Z7vWJWr/qNrs7/1Q2ZytUae/SOXv6+3d27zzf7dXZV5pKd98XGBfCnwYA7I/lvpsAGMCeN+D5erjBAPa8Ac/Xww0GsOcNeL4ebjCAPW/A8/Vwgz0H/gW1d3FcTBnVZwAAAABJRU5ErkJggg\u003d\u003d",
+        "thumbnailData": "data:image/png;base64,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\u003d",
         "disableSafetyLimits": false,
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT"
