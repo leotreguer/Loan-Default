@@ -18,6 +18,10 @@
       "remote": "git@github.com:leotreguer/demo-repo.git",
       "checkout": "refs/heads/main",
       "remotePath": "",
+      "lastHash": "52be5d1e744c675937a888d70c2b0f91aadb89e3",
+      "conflictingFiles": [],
+      "resolvedFiles": [],
+      "faultyHash": "",
       "isDirty": false
     }
   },
