@@ -4,19 +4,28 @@
       "remote": "https://github.com/dataiku/dss-plugin-geocoder.git",
       "checkout": "refs/heads/master",
       "remotePath": "",
-      "lastHash": "1a64c236e8c35805020b919840feedf38632d357"
+      "lastHash": "1a64c236e8c35805020b919840feedf38632d357",
+      "isDirty": false
     },
     "test": {
       "remote": "https://github.com/pmasiphelps/gan_finance_libs.git",
       "checkout": "refs/heads/master",
       "remotePath": "",
-      "lastHash": "ac617f43512eafd5f06725a96e1d18c2bb637918"
+      "lastHash": "ac617f43512eafd5f06725a96e1d18c2bb637918",
+      "isDirty": false
+    },
+    "demo repo": {
+      "remote": "git@github.com:leotreguer/demo-repo.git",
+      "checkout": "refs/heads/main",
+      "remotePath": "",
+      "isDirty": false
     }
   },
   "pythonPath": [
     "python",
     "import-plugin-geo",
-    "test"
+    "test",
+    "demo repo"
   ],
   "rsrcPath": [
     "R"
