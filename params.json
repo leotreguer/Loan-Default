@@ -229,11 +229,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 23,
+    "versionNumber": 25,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1654091534152
+    "lastModifiedOn": 1654092938580
   },
   "creationTag": {
     "versionNumber": 0,
@@ -279,6 +279,13 @@
             "done": false,
             "text": "has scenario",
             "createdOn": 1588602460988,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "@leo.treguer do this",
+            "createdOn": 1654092938522,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
