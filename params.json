@@ -53,7 +53,7 @@
       "shareAllInputDatasets": false
     }
   },
-  "owner": "leo.treguer",
+  "owner": "admin",
   "permissionsVersion": "LEGACY",
   "permissions": [],
   "additionalDashboardUsers": {
@@ -229,11 +229,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 25,
+    "versionNumber": 26,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1654092938580
+    "lastModifiedOn": 1654093031974
   },
   "creationTag": {
     "versionNumber": 0,
@@ -245,7 +245,8 @@
   "description": "## Title\n\n### sub-title",
   "shortDesc": "The project *DEMO_LOAN_DEFAULT* was created by Administrator on May 11th 2020",
   "tags": [
-    "imported"
+    "imported",
+    "duplicated"
   ],
   "customFields": {},
   "checklists": {
