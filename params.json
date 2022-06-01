@@ -229,11 +229,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 15,
+    "versionNumber": 23,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1653474594175
+    "lastModifiedOn": 1654091534152
   },
   "creationTag": {
     "versionNumber": 0,
@@ -251,38 +251,44 @@
   "checklists": {
     "checklists": [
       {
-        "title": "Your new project\u0027s Todo",
+        "title": "Review list by user",
         "createdOn": 0,
         "items": [
           {
             "done": true,
-            "text": "Create the project",
+            "text": "Has metrics\n",
             "createdOn": 1588602460988,
             "createdBy": "admin",
             "stateChangedOn": 0
           },
           {
             "done": false,
-            "text": "Set a project image (click on the color next to the project title)",
+            "text": "Has checks in place\n",
             "createdOn": 1588602460988,
             "createdBy": "admin",
             "stateChangedOn": 0
           },
           {
             "done": false,
-            "text": "Import your [first dataset](projects/FIFTHTHIRD_LOANDEFAULT/datasets/new/)",
+            "text": "has knowledge page",
             "createdOn": 1588602460988,
             "createdBy": "admin",
             "stateChangedOn": 0
           },
           {
             "done": false,
-            "text": "Organize your work by replacing this with a real todo",
+            "text": "has scenario",
             "createdOn": 1588602460988,
             "createdBy": "admin",
             "stateChangedOn": 0
           }
         ]
+      },
+      {
+        "id": "e0267f",
+        "title": "Review list by admin",
+        "createdOn": 0,
+        "items": []
       }
     ]
   }
