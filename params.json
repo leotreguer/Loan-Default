@@ -172,7 +172,7 @@
     },
     "dkuProperties": []
   },
-  "name": "Loan Default Prediction",
+  "name": "Copy of Loan Default Prediction",
   "imgPattern": 3,
   "metrics": {
     "probes": [],
@@ -229,11 +229,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 26,
+    "versionNumber": 27,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1654093031974
+    "lastModifiedOn": 1654093036474
   },
   "creationTag": {
     "versionNumber": 0,
@@ -243,7 +243,7 @@
     "lastModifiedOn": 1588602460987
   },
   "description": "## Title\n\n### sub-title",
-  "shortDesc": "The project *DEMO_LOAN_DEFAULT* was created by Administrator on May 11th 2020",
+  "shortDesc": "The project *DEMO_LOAN_DEFAULT* was created by Administrator on May 11th 2020\nThe project *COPYOFLOANDEFAULTPREDICTION_3* was copied from *DEMO_LOAN_DEFAULT* by Administrator on juin 01st 2022",
   "tags": [
     "imported",
     "duplicated"
